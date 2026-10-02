@@ -110,7 +110,8 @@ foreach ($destino in @([Environment]::GetFolderPath('Desktop'), (Join-Path ([Env
 	}
 	$acceso.WorkingDirectory = $env:USERPROFILE
 	$acceso.Description = 'Asistente de IA para tus proyectos'
-	$acceso.IconLocation = "$NodeExe,0"
+	$icono = Join-Path $carpetaApp 'node_modules\hilosenda\install\hilosenda.ico'
+	$acceso.IconLocation = if (Test-Path $icono) { "$icono,0" } else { "$NodeExe,0" }
 	$acceso.Save()
 }
 Ok 'Accesos directos en el Escritorio y en el menu Inicio'
