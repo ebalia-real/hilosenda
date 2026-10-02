@@ -193,6 +193,7 @@ Type=Application
 Name=hilosenda
 Comment=Asistente de IA para tus proyectos
 Exec=$BIN_DIR/hilosenda
+Icon=$DIR/app/node_modules/hilosenda/install/hilosenda.png
 Terminal=true
 Categories=Development;Utility;
 EOF
